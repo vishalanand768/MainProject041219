@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="MainProject041219.Admin" %>
+<%@ Register Src="~/Header.ascx" TagName="myhead" TagPrefix="wuc" %>
+<%@ Register Src="~/Footer.ascx" TagName="myfoot" TagPrefix="wuc" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <wuc:myhead ID="h1" runat="server" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div id="menu">
+		<ul class="menu">
+			<li><a href="#"><span>Home</span></a></li>
+			<li><a href="RegistrationForm.aspx"><span>Registration</span></a></li>
+            <li><a href="Employee.aspx"><span>Employee</span></a></li>
+			<li class="last"><a href="Contact.aspx"><span>Contact</span></a></li>
+		</ul>
+	</div>
+                </td>
+            </tr>
+
+             <tr>
+                <td style =" background-color:lightgray">
+                    <center><asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder></center>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <wuc:myfoot ID="h2" runat="server" />
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
